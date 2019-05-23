@@ -9,7 +9,7 @@ from django.views import generic
 from .models import Question, Choice
 
 class IndexView(generic.ListView):
-    template_name = 'heretolearnapp/index.html'
+    template_name = 'heretolearnapp/templates/index.html'
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):
@@ -19,12 +19,12 @@ class IndexView(generic.ListView):
 
 class DetailView(generic.DetailView):
     model = Question
-    template_name = 'heretolearnapp/detail.html'
+    template_name = 'heretolearnapp/templates/detail.html'
 
 
 class ResultsView(generic.DetailView):
     model = Question
-    template_name = 'heretolearnapp/results.html'
+    template_name = 'heretolearnapp/templates/results.html'
 
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
@@ -32,7 +32,7 @@ def vote(request, question_id):
         selected_choice = question.choice_set.get(pk=request.POST['choice'])
     except (KeyError, Choice.DoesNotExist):
         # Redisplay the question voting form.
-        return render(request, 'heretolearnapp/detail.html', {
+        return render(request, 'heretolearnapp/templates/detail.html', {
             'question': question,
             'error_message': "You didn't select a choice.",
         })
