@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('polls/', include('heretolearnapp.urls')),
+    # path('heretolearnapp', include('heretolearnapp.urls')),
+    path('', include('machinelearning.urls')),
     path('admin/', admin.site.urls),
 ]

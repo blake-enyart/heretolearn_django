@@ -31,8 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'rest_framework',
-    'heretolearnapp',
+    # 'heretolearnapp.apps.HeretolearnappConfig',
+    'machinelearning.apps.MachinelearningConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
