@@ -17,10 +17,6 @@ my_vcr = vcr.VCR(
 from django.test import TestCase
 from django.utils import timezone
 
-from heretolearnapp.models import Question # tutorial stuff
-# from .models import Iris
-# from .serializers import IrisSerializer
-
 class IrisesApiTests(VCRTestCase):
 
     with my_vcr.use_cassette('fixtures/vcr_cassettes/irises/all.yaml'):
