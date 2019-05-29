@@ -162,13 +162,13 @@ class ParseSurveyData(SinatraApi):
 
         return {
                 'score': prediction,
-                'meals_missed': student_processed_data[0][0],
+                'meals_missed': 1 - student_processed_data[0][0],
                 'sleep_quality':
                     { 'none': 1 - sum(student_processed_data[0][1:5]),
                     'less_than': student_processed_data[0][1],
                     'usual': student_processed_data[0][2],
                     'more_than': student_processed_data[0][3],
-                    'way_more': student_processed_data[0][4] 
+                    'way_more': student_processed_data[0][4]
                     }
                 }
 
