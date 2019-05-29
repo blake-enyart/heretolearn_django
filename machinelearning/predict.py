@@ -159,7 +159,18 @@ class ParseSurveyData(SinatraApi):
         best_model = cls.model_extraction()
         prediction = best_model.predict(student_processed_data)
         prediction = round(prediction[0], 2)
-        return { 'score': prediction }
+
+        return {
+                'score': prediction,
+                'meals_missed': student_processed_data[0][0],
+                'sleep_quality':
+                    { 'none': 1 - sum(student_processed_data[0][1:5]),
+                    'less_than': student_processed_data[0][1],
+                    'usual': student_processed_data[0][2],
+                    'more_than': student_processed_data[0][3],
+                    'way_more': student_processed_data[0][4] 
+                    }
+                }
 
     @classmethod
     def model_extraction(cls, file_path='./data/models/grade_prediction_gbr_model.pickle'):
