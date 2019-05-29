@@ -20,4 +20,4 @@ def student_analysis(request):
         data = ParseSurveyData.score_prediction(student_data)
         return JsonResponse(data)
     else:
-        return JsonResonse({})
+        return JsonResponse({})
