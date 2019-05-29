@@ -17,7 +17,7 @@ def student_analysis(request):
     student_id = request.GET.get('student_id', '')
     student_data = ParseSurveyData.student_data(student_id = student_id)
     if student_data == None:
+        return JsonResponse({})
+    else:
         data = ParseSurveyData.score_prediction(student_data)
         return JsonResponse(data)
-    else:
-        return JsonResponse({})
