@@ -16,5 +16,8 @@ class IndexView(generic.TemplateView):
 def student_analysis(request):
     student_id = request.GET.get('student_id', '')
     student_data = ParseSurveyData.student_data(student_id = student_id)
-    data = ParseSurveyData.score_prediction(student_data)
-    return JsonResponse(data)
+    if student_data == None:
+        data = ParseSurveyData.score_prediction(student_data)
+        return JsonResponse(data)
+    else:
+        return JsonResonse({})

@@ -183,5 +183,8 @@ class ParseSurveyData(SinatraApi):
         student_id = int(student_id)
         student_survey_data = cls.survey_data(student_id, df)
         student_quiz_data = cls.quiz_data(student_id, df)
-        all_student_data =  cls.data_parse(student_quiz_data, student_survey_data)
-        return [all_student_data[0]['data']]
+        if len(student_survey_data) > 0:
+            all_student_data =  cls.data_parse(student_quiz_data, student_survey_data)
+            return [all_student_data[0]['data']]
+        else:
+            return None
