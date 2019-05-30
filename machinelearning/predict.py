@@ -66,6 +66,7 @@ class SinatraApi:
     @classmethod
     def all_data(cls):
         df = pd.concat([cls.all_responses(), cls.all_answers()])
+        embed()
         df['choice_id'] = df['choice_id'].astype('float64')
         df['student_id'] = df['student_id'].astype('int64')
         return df
