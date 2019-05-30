@@ -43,8 +43,8 @@ class SinatraApi:
 
     @classmethod
     def all_responses(cls):
-        # url = 'https://aqueous-caverns-33840.herokuapp.com/api/v1/responses'
-        url = 'http://localhost:9393/api/v1/responses'
+        url = 'https://aqueous-caverns-33840.herokuapp.com/api/v1/responses'
+        # url = 'http://localhost:9393/api/v1/responses'
         raw_data = cls.__get_json(url=url)
         df = pd.DataFrame([r['attributes'] for r in raw_data])
 
