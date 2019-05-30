@@ -88,63 +88,114 @@ import pickle
 #     class Meta:
 #         abstract = True
 #
-#     def get_data():
-#         return SinatraApi.all_data()
-#
-#     @classmethod
-#     def parse_data(cls):
-#         df = get_data()
-#         dataset = []
-#         for s in df.student_id.unique():
-#             student_data = data_parse(quiz_data(s, df), survey_data(s, df))
-#
-#             for record in student_data:
-#                 dataset.append(record)
-#         return dataset
-#
-#     @classmethod
-#     def survey_data(cls, s, df):
-#         survey_data = pd.concat([food_data(s, df), sleep_data(s, df)], sort=False)
-#         survey_data = survey_data.sort_values(['created_at'])
-#         return survey_data
-#
-#     @classmethod
-#     def food_data(cls, s, df):
-#         food_data = df[(df.student_id == s) & (df.question_id == 1)] # food data for student
-#         food_data = food_data[['created_at', 'choice_id']]
-#         idx = (food_data['choice_id'] == 2)
-#         food_data.loc[idx,['choice_id']] = food_data.loc[idx,['choice_id']] - 2
-#         return food_data
-#
-#     @classmethod
-#     def sleep_data(cls, s, df):
-#         sleep_data = sleep_dummies(df)[(sleep_dummies.student_id == s)] # sleep data for student
-#         sleep_data = sleep_data[['created_at','choice_id_4.0','choice_id_5.0', 'choice_id_6.0', 'choice_id_7.0']]
-#         return sleep_data
-#
-#     @classmethod
-#     def sleep_dummies(cls, df):
-#         return pd.get_dummies(df[(df.question_id == 2)],
-#                               drop_first=True,
-#                               columns=['choice_id'])
-#
-#     @classmethod
-#     def quiz_data(cls, s, df):
-#         quiz_data = df[(df.student_id == s) & (df.question_id == 3)]
-#         quiz_data = quiz_data.sort_values(['created_at'])[['choice_id', 'created_at']].reset_index()
-#         return quiz_data
-#
-#     @classmethod
-#     def score_prediction(cls, student_data): # use with student_data fxn
-#         best_model = model_extraction()
-#         return { 'score': best_model.predict(data) }
-#
-#     @classmethod
-#     def model_extraction(cls, file_path='./data/models/grade_prediction_gbr_model.pickle'):
-#         with open(file_path, "rb") as f:
-#             best_model = pickle.load(f)
-#         return best_model
-#
-#     @classmethod
-#     def student_data(cls, student_id, df = get_data()):
-#         return survey_data(student_id, df)
+    # def get_data():
+    #     return SinatraApi.all_data()
+    #
+    # @classmethod
+    # def parse_data(cls):
+    #     df = cls.get_data()
+    #     dataset = []
+    #     for s in df.student_id.unique():
+    #         student_data = cls.data_parse(quiz_data(s, df), survey_data(s, df))
+    #         for record in student_data:
+    #             dataset.append(record)
+    #     return dataset
+    #
+    # @classmethod
+    # def data_parse(cls, quiz_data, survey_data):
+    #     student_array = []
+    #     for index, row in quiz_data.iterrows():
+    #         columns = ['choice_id','choice_id_4.0','choice_id_5.0','choice_id_6.0','choice_id_7.0']
+    #         if index == 0:
+    #             survey_date = survey_data[(survey_data.created_at <= row.created_at)]
+    #             percent_survey = []
+    #             for col in columns:
+    #                 try:
+    #                     x = survey_date[col].value_counts(normalize=True).loc[1]
+    #                 except: # doesn't account for if there are no surveys
+    #                     x = 0.0
+    #                 percent_survey.append(x)
+    #
+    #             student_array.append({'score':row['choice_id'],
+    #                                   'data': percent_survey})
+    #         else:
+    #             survey_date = survey_data[(survey_data.created_at <= row.created_at)
+    #                                       & (survey_data.created_at > quiz_data.iloc[index - 1].created_at) ]
+    #             percent_survey = []
+    #             for col in columns:
+    #                 try:
+    #                     x = survey_date[col].value_counts(normalize=True).loc[1]
+    #                 except: # doesn't account for if there are no surveys
+    #                     x = 0.0
+    #                 percent_survey.append(x)
+    #
+    #             student_array.append({'score':row['choice_id'],
+    #                                   'data': percent_survey})
+    #     return student_array
+    #
+    # @classmethod
+    # def survey_data(cls, s, df):
+    #     survey_data = pd.concat([cls.food_data(s, df), cls.sleep_data(s, df)], sort=False)
+    #     survey_data = survey_data.sort_values(['created_at'])
+    #     return survey_data
+    #
+    # @classmethod
+    # def food_data(cls, s, df):
+    #     food_data = df[(df.student_id == s) & (df.question_id == 1)] # food data for student
+    #     food_data = food_data[['created_at', 'choice_id']]
+    #     idx = (food_data['choice_id'] == 2)
+    #     food_data.loc[idx,['choice_id']] = food_data.loc[idx,['choice_id']] - 2
+    #     return food_data
+    #
+    # @classmethod
+    # def sleep_data(cls, s, df):
+    #     sleep_data = cls.sleep_dummies(df)[(cls.sleep_dummies(df).student_id == s)] # sleep data for student
+    #     sleep_data = sleep_data[['created_at','choice_id_4.0','choice_id_5.0', 'choice_id_6.0', 'choice_id_7.0']]
+    #     return sleep_data
+    #
+    # @staticmethod
+    # def sleep_dummies(df):
+    #     return pd.get_dummies(df[(df.question_id == 2)],
+    #                           drop_first=True,
+    #                           columns=['choice_id'])
+    #
+    # @classmethod
+    # def quiz_data(cls, s, df):
+    #     quiz_data = df[(df.student_id == s) & (df.question_id == 3)]
+    #     quiz_data = quiz_data.sort_values(['created_at'])[['choice_id', 'created_at']].reset_index()
+    #     return quiz_data
+    #
+    # @classmethod
+    # def score_prediction(cls, student_processed_data): # use with student_data fxn
+    #     best_model = cls.model_extraction()
+    #     prediction = best_model.predict(student_processed_data)
+    #     prediction = round(prediction[0], 2)
+    #
+    #     return {
+    #             'score': prediction,
+    #             'meals_missed': 1 - student_processed_data[0][0],
+    #             'sleep_quality':
+    #                 { 'none': 1 - sum(student_processed_data[0][1:5]),
+    #                 'less_than': student_processed_data[0][1],
+    #                 'usual': student_processed_data[0][2],
+    #                 'more_than': student_processed_data[0][3],
+    #                 'way_more': student_processed_data[0][4]
+    #                 }
+    #             }
+    #
+    # @classmethod
+    # def model_extraction(cls, file_path='./data/models/grade_prediction_gbr_model.pickle'):
+    #     with open(file_path, "rb") as f:
+    #         best_model = pickle.load(f)
+    #     return best_model
+    #
+    # @classmethod
+    # def student_data(cls, student_id, df = get_data()):
+    #     student_id = int(student_id)
+    #     student_survey_data = cls.survey_data(student_id, df)
+    #     student_quiz_data = cls.quiz_data(student_id, df)
+    #     if len(student_survey_data) > 0:
+    #         all_student_data =  cls.data_parse(student_quiz_data, student_survey_data)
+    #         return [all_student_data[0]['data']]
+    #     else:
+    #         return None

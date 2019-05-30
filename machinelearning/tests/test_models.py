@@ -6,7 +6,6 @@ from pprint import pprint
 from vcr_unittest import VCRTestCase
 import requests
 import vcr
-
 my_vcr = vcr.VCR(
     serializer='json',
     cassette_library_dir='fixtures/cassettes',
@@ -17,17 +16,20 @@ my_vcr = vcr.VCR(
 from django.test import TestCase
 from django.utils import timezone
 
-class IrisesApiTests(VCRTestCase):
+# Debugging
+import IPython
+from IPython import embed
 
-    with my_vcr.use_cassette('fixtures/vcr_cassettes/irises/all.yaml'):
-        def test_get_all_irises(self):
+from machinelearning.predict import SinatraApi, ParseSurveyData
+
+class MachineLearningTests(TestCase):
+    with my_vcr.use_cassette('fixtures/vcr_cassettes/predict/responses.json', record_mode='none'):
+        def test_parse_response_correctly(self):
             """
-            This test ensures that all irises stored in database from rails
-            app are received in a GET request to the irises/ endpoint
+            This test ensures that all responses are from sinatra app are
+            parsed correctly in a GET request to the aqueous-caverns-33840.herokuapp.com/api/v1/responses
+            endpoint
             """
-            response = requests.get('http://localhost:3000/api/v1/irises').json()
+            url = 'https://aqueous-caverns-33840.herokuapp.com/api/v1/responses'
 
-            iris_attributes = response['data'][0]['attributes'].values()
-
-            self.assertEqual(150, len(response['data']))
-            self.assertEqual(5, len(iris_attributes))
+            self.assertTrue(isInstance(ParseSurveyData.__get_json(cls,url)), Dictionary)
