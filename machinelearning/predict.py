@@ -187,7 +187,7 @@ class ParseSurveyData(SinatraApi):
         best_model = cls.model_extraction()
         prediction = best_model.predict(raw_info)
         prediction = round(prediction[0], 2)
-
+        raw_info = round((raw_info * 100), 2)
         return {
                 'score': prediction,
                 'meals_missed': raw_info[1.0].values[0],
