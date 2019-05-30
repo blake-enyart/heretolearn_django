@@ -192,7 +192,7 @@ class ParseSurveyData(SinatraApi):
                 'score': prediction,
                 'meals_missed': raw_info[1.0].values[0],
                 'sleep_quality':
-                    { 'none': 1 - raw_info[[4.0, 5.0, 6.0, 7.0]].sum(axis=1).values[0],
+                    { 'none': abs(100 - raw_info[[4.0, 5.0, 6.0, 7.0]].sum(axis=1).values[0]),
                     'less_than': raw_info[4.0].values[0],
                     'usual': raw_info[5.0].values[0],
                     'more_than': raw_info[6.0].values[0],
