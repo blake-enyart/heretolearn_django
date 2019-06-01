@@ -20,23 +20,6 @@
 * Work with two other applications, a [Sinatra microservice](https://aqueous-caverns-33840.herokuapp.com) and a [Rails application](https://young-anchorage-86985.herokuapp.com)
 * Predict student test scores using machine learning model developed [here](https://github.com/blake-enyart/heretolearn_django/blob/master/jupyter_notebook/ml-generator.ipynb)
 
-## Where to Find Each Application
-#### Here To Learn - Rails
- ```
- development: localhost:3000
- production: https://young-anchorage-86985.herokuapp.com
- ```
-#### Surveys - Sinatra
- ```
- development: localhost:9393
- production: https://aqueous-caverns-33840.herokuapp.com
- ```
-#### Machine Learning Microservice - Django & Jupyter Notebook
- ```
- development: localhost:8000
- production: http://lit-fortress-28598.herokuapp.com/
- ```
- 
 ## Setup/Configuration
 ```
 python3 -m venv env
