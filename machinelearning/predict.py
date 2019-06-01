@@ -108,16 +108,19 @@ class ParseSurveyData(SinatraApi):
         prediction = round(prediction[0], 2)
         raw_info = round((raw_info * 100), 2)
         return {
-                'score': prediction,
-                'meals_missed': raw_info[1.0].values[0],
-                'sleep_quality':
-                    { 'none': abs(100 - raw_info[[4.0, 5.0, 6.0, 7.0]].sum(axis=1).values[0]),
-                    'less_than': raw_info[4.0].values[0],
-                    'usual': raw_info[5.0].values[0],
-                    'more_than': raw_info[6.0].values[0],
-                    'way_more': raw_info[7.0].values[0]
-                    }
-                }
+            'score': prediction,
+            'meals': {
+                'Yes': raw_info[1.0].values[0],
+                'No': round((100 - raw_info[1.0].values[0]), 2)
+            },
+            'sleep_quality': {
+                'None': abs(100 - raw_info[[4.0, 5.0, 6.0, 7.0]].sum(axis=1).values[0]),
+                'Less Than': raw_info[4.0].values[0],
+                'Average': raw_info[5.0].values[0],
+                'More Than': raw_info[6.0].values[0],
+                'Way More': raw_info[7.0].values[0]
+            }
+        }
 
     @classmethod
     def model_extraction(cls, file_path='./data/models/grade_prediction_gbr_model.pickle'):
