@@ -42,5 +42,5 @@ v1  5/30/2019
 ```
 ## Contributing
 
-* (Blake Enyart)[https://github.com/blake-enyart]
-* (William Peterson)[https://github.com/wipegup]
+* [Blake Enyart](https://github.com/blake-enyart)
+* [William Peterson](https://github.com/wipegup)
