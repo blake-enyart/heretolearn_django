@@ -16,7 +16,7 @@ psql
 CREATE DATABASE heretolearn_production;
 CREATE USER heretolearn WITH PASSWORD 'badgers';
 GRANT ALL PRIVILEGES ON DATABASE heretolearn_production TO heretolearn;
-`\q`
+\q
 python manage.py migrate
 python manage.py runserver
  ```
