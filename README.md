@@ -5,11 +5,22 @@
 
  [HereToLearn](https://young-anchorage-86985.herokuapp.com), a Rails application, works with this application to present the graphs, interact with teachers and students.
  
- The Jupyter Notebook demonstrating how the model was selected and trained can be seen [here](https://github.com/blake-enyart/heretolearn_django/blob/master/jupyter_notebook/ml-generator.ipynb).
+ The [Jupyter Notebook](https://github.com/blake-enyart/heretolearn_django/blob/master/jupyter_notebook/ml-generator.ipynb). demonstrates how the model was selected and trained.
+
+**Jupyter Notebook Highlights:**
+* Microservice JSON API conversion into pandas DataFrame
+* Dummy variable implementation for nominal categorical sleep data
+* model selection through k-fold cross validation in RandomSearchCV
+* Hyperparameter optimization
+* Gradient boosted model training
+* matplotlib and seaborn visualization
+
+**Rails App Integration:**
+* chart.js presentation
 
 ## Goals
-* Work with two other applications, a Sinatra microservice and a Rails application
-* Predict student test scores
+* Work with two other applications, a [Sinatra microservice](https://aqueous-caverns-33840.herokuapp.com) and a [Rails application](https://young-anchorage-86985.herokuapp.com)
+* Predict student test scores using machine learning model developed [here](https://github.com/blake-enyart/heretolearn_django/blob/master/jupyter_notebook/ml-generator.ipynb)
 
 ## Configuration
 ```
@@ -40,11 +51,8 @@ python manage.py runserver
  development: localhost:8000
  production: http://lit-fortress-28598.herokuapp.com/
  ```
-## Versioning
-```
-v1  5/30/2019
-```
+
 ## Contributing
 
-* [Blake Enyart](https://github.com/blake-enyart) - Developed django app and implemented machine learning design
-* [William Peterson](https://github.com/wipegup) - Provided input and guidance on the machine learning model
+* [Blake Enyart](https://github.com/blake-enyart) - django app, data visualization (chart.js, seaborn, matplotlib), machine learning implementation
+* [William Peterson](https://github.com/wipegup) - Provided input and mentoring on the machine learning model development
