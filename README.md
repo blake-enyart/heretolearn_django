@@ -36,23 +36,22 @@ python manage.py migrate
 python manage.py runserver
  ```
 ## Where to Find the Each Application
-#### Here To Learn (Rails)
+#### Here To Learn - Rails
  ```
  development: localhost:3000
  production: https://young-anchorage-86985.herokuapp.com
  ```
-#### Surveys (Sinatra)
+#### Surveys - Sinatra
  ```
  development: localhost:9393
  production: https://aqueous-caverns-33840.herokuapp.com
  ```
-#### Machine Learning Microservice (Django)
+#### Machine Learning Microservice - Django & Jupyter Notebook
  ```
  development: localhost:8000
  production: http://lit-fortress-28598.herokuapp.com/
  ```
 
 ## Contributing
-
 * [Blake Enyart](https://github.com/blake-enyart) - Django app, data visualization (chart.js, seaborn, matplotlib), machine learning implementation
 * [William Peterson](https://github.com/wipegup) - Provided input and mentoring on the machine learning model development
