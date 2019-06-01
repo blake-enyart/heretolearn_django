@@ -4,21 +4,16 @@
  [Django application](http://lit-fortress-28598.herokuapp.com/) utilizes a machine learning model trained with over 300,000 data points to predict test outcomes for 5,000 mock students based on eating and sleeping habits for each student.
 
  This [Jupyter Notebook](https://github.com/blake-enyart/heretolearn_django/blob/master/jupyter_notebook/ml-generator.ipynb) demonstrates:
- * Data generation
- * Data munging
- * Model selection and training
-
-**Jupyter Notebook Highlights:**
-* Microservice JSON API conversion into pandas DataFrame
-* Dummy variable implementation for nominal categorical sleep data
-* model selection through k-fold cross validation in RandomSearchCV
-* Hyperparameter optimization
+* Data generation
+* JSON API conversion to pandas DataFrame
+* Data munging (dummy variables for nominal categorical sleep data)
+* Hyperparameter optimization & model selection in RandomSearchCV
 * Gradient boosted model training
 * matplotlib and seaborn visualization
 
  This app integrates with [HereToLearn](https://young-anchorage-86985.herokuapp.com), a Rails application, which presents the data and serves as the interface for teachers and students.
 
-**Rails App Integration:**
+**Rails App Integration Highlight:**
 * Chart.js presentation
 
 ## Django App Goals
