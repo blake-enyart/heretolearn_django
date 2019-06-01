@@ -41,5 +41,6 @@ python manage.py runserver
 v1  5/30/2019
 ```
 ## Contributing
-```https://github.com/blake-enyart/heretolearn_django
-```
+
+* (Blake Enyart)[https://github.com/blake-enyart]
+* (William Peterson)[https://github.com/wipegup]
