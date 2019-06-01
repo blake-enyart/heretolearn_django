@@ -1,4 +1,4 @@
-# Here To Learn on django
+# Here To Learn - django
 
 ## Description
  This [Django application](http://lit-fortress-28598.herokuapp.com/) utilizes a machine learning model trained with over 300,000 data points to predict test outcomes for 5,000 mock students based on eating and sleeping habits for each student. The goal is to assist students reach their full potential. 
@@ -25,17 +25,17 @@ python manage.py migrate
 python manage.py runserver
  ```
 ## Locations/Where to Find the applications
-### Here To Learn
+#### Here To Learn
  ```
  development: localhost:3000
  production: https://young-anchorage-86985.herokuapp.com
  ```
-### Surveys
+#### Surveys
  ```
  development: localhost:9393
  production: https://aqueous-caverns-33840.herokuapp.com
  ```
-### Machine Learning Microservice
+#### Machine Learning Microservice
  ```
  development: localhost:8000
  production: http://lit-fortress-28598.herokuapp.com/
