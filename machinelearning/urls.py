@@ -1,8 +1,9 @@
 from django.urls import path
 
-from . import views
+from machinelearning.views import IndexView, StudentAnalysis
 
 app_name = 'machinelearning'
 urlpatterns = [
-    path('', views.IndexView.as_view(), name='index'),
+    path('', IndexView.as_view(), name='index'),
+    path('results/', StudentAnalysis.as_view(), name='score'),
 ]
