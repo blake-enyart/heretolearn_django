@@ -25,7 +25,7 @@
 <img src="media/README/tech_stack.png"  width="600" height="auto"/>
 
 #### Analysis
-<img src="media/README/joint_plot.png" width="300" height="auto"/>
+<img src="media/README/joint_plot.png" width="400" height="auto"/>
 
 ## Setup/Configuration
 ```
