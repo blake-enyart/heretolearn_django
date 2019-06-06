@@ -1,7 +1,7 @@
 # Here To Learn - Django & Jupyter Notebook
 
 ## Description
- [Django application](http://lit-fortress-28598.herokuapp.com/) utilizes a machine learning model trained with over 300,000 data points to predict test outcomes for 5,000 mock students based on eating and sleeping habits for each student.
+ [Django application](http://lit-fortress-28598.herokuapp.com/) hosted on Heroku utilizes a machine learning model trained with over 300,000 data points to predict test outcomes for 5,000 mock students based on eating and sleeping habits for each student.
 
  This [Jupyter Notebook](https://github.com/blake-enyart/heretolearn_django/blob/master/jupyter_notebook/ml-generator.ipynb) demonstrates:
 * Data generation
