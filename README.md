@@ -22,9 +22,9 @@
 
 ## Highlights
 #### Tech Stack
-<img src="media/README/tech_stack.png"  width="100"/>
+<img src="media/README/tech_stack.png"  width="300" height="auto"/>
 #### Analysis
-![alt text](media/README/joint_plot.png)
+<img src="media/README/joint_plot.png" width="300" height="auto")
 
 ## Setup/Configuration
 ```
