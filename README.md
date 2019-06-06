@@ -14,17 +14,17 @@
  This app integrates with [HereToLearn](https://young-anchorage-86985.herokuapp.com), a Rails application, which presents the data and serves as the interface for teachers and students.
 
 **Rails App Integration Highlight:**
-* Chart.js presentation
+* Chart.js presentation of data
 
 ## Contributing
 * [Blake Enyart](https://github.com/blake-enyart) - Django app, data visualization (chart.js, seaborn, matplotlib), machine learning implementation
 * [William Peterson](https://github.com/wipegup) - Provided input and mentoring on the machine learning model development
 
 ## Django App Goals
-* Work with two other applications, a [Sinatra microservice](https://aqueous-caverns-33840.herokuapp.com) and a [Rails application](https://young-anchorage-86985.herokuapp.com)
+* Work with two other applications, a [Sinatra microservice](https://aqueous-caverns-33840.herokuapp.com) and a [Rails application](https://young-anchorage-86985.herokuapp.com) in service oriented architechture.
 * Predict student test scores using machine learning model developed [here](https://github.com/blake-enyart/heretolearn_django/blob/master/jupyter_notebook/ml-generator.ipynb)
 
-## Highlights
+## Technical Highlights
 #### Tech Stack
 <p align="center">
  <img src="media/README/tech_stack.png" width="600" height="auto"/>
@@ -34,7 +34,8 @@
 <p align="center">
  <img src="media/README/joint_plot.png" width="400" height="auto"/>
 </p>
-## Setup/Configuration
+## Local Configuration
+Use the following code to setup the code locally:
 ```
 python3 -m venv env
 source env/bin/activate
@@ -47,3 +48,4 @@ GRANT ALL PRIVILEGES ON DATABASE heretolearn_production TO heretolearn;
 python manage.py migrate
 python manage.py runserver
  ```
+ Navigate to `localhost:8000` from your browser to see the app in development mode
