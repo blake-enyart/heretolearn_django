@@ -21,7 +21,10 @@
 * Predict student test scores using machine learning model developed [here](https://github.com/blake-enyart/heretolearn_django/blob/master/jupyter_notebook/ml-generator.ipynb)
 
 ## Highlights
+#### Tech Stack
 ![alt text](media/README/tech_stack.png)
+#### Analysis
+![alt text](media/README/joint_plot.png)
 
 ## Setup/Configuration
 ```
