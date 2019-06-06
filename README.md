@@ -26,11 +26,14 @@
 
 ## Highlights
 #### Tech Stack
-<img src="media/README/tech_stack.png" style="vertical-align:middle" width="600" height="auto"/>
+<p align="center">
+ <img src="media/README/tech_stack.png" width="600" height="auto"/>
+</p>
 
 #### Analysis
-<img src="media/README/joint_plot.png" style="vertical-align:middle" width="400" height="auto"/>
-
+<p align="center">
+ <img src="media/README/joint_plot.png" width="400" height="auto"/>
+</p>
 ## Setup/Configuration
 ```
 python3 -m venv env
