@@ -22,7 +22,7 @@
 
 ## Highlights
 #### Tech Stack
-![alt text](media/README/tech_stack.png | width=100)
+<img src="media/README/tech_stack.png"  width="100"/>
 #### Analysis
 ![alt text](media/README/joint_plot.png)
 
