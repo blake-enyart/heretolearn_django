@@ -11,7 +11,7 @@
 * Gradient boosted model training
 * matplotlib and seaborn visualization
 
- This app integrates with [HereToLearn](https://young-anchorage-86985.herokuapp.com), a Rails application, which presents the data and serves as the interface for teachers and students.
+ This app integrates with [Here To Learn](https://young-anchorage-86985.herokuapp.com), a Rails application, which presents the data and serves as the interface for teachers and students.
 
 **Rails App Integration Highlight:**
 * Chart.js presentation of data
