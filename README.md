@@ -20,6 +20,9 @@
 * Work with two other applications, a [Sinatra microservice](https://aqueous-caverns-33840.herokuapp.com) and a [Rails application](https://young-anchorage-86985.herokuapp.com)
 * Predict student test scores using machine learning model developed [here](https://github.com/blake-enyart/heretolearn_django/blob/master/jupyter_notebook/ml-generator.ipynb)
 
+## Highlights
+![alt text](media/README/tech_stack.png)
+
 ## Setup/Configuration
 ```
 python3 -m venv env
@@ -33,7 +36,7 @@ GRANT ALL PRIVILEGES ON DATABASE heretolearn_production TO heretolearn;
 python manage.py migrate
 python manage.py runserver
  ```
- 
+
 ## Contributing
 * [Blake Enyart](https://github.com/blake-enyart) - Django app, data visualization (chart.js, seaborn, matplotlib), machine learning implementation
 * [William Peterson](https://github.com/wipegup) - Provided input and mentoring on the machine learning model development
