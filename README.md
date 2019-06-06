@@ -26,10 +26,10 @@
 
 ## Highlights
 #### Tech Stack
-<img src="media/README/tech_stack.png" align="middle" width="600" height="auto"/>
+<img src="media/README/tech_stack.png" style="vertical-align:middle" width="600" height="auto"/>
 
 #### Analysis
-<img src="media/README/joint_plot.png" align="middle" width="400" height="auto"/>
+<img src="media/README/joint_plot.png" style="vertical-align:middle" width="400" height="auto"/>
 
 ## Setup/Configuration
 ```
