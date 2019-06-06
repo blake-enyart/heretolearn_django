@@ -34,7 +34,9 @@
 <p align="center">
  <img src="media/README/joint_plot.png" width="400" height="auto"/>
 </p>
+
 ## Local Configuration
+
 Use the following code to setup the code locally:
 ```
 python3 -m venv env
