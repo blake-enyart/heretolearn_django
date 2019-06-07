@@ -35,7 +35,7 @@
  <img src="media/README/joint_plot.png" width="400" height="auto"/>
 </p>
 
-## Local Configuration
+## Local Configuration for Further Development
 
 Use the following code to setup the code locally:
 ```
@@ -51,3 +51,10 @@ python manage.py migrate
 python manage.py runserver
  ```
  Navigate to `localhost:8000` from your browser to see the app in development mode
+ 
+## Django App Demo
+
+Use the following endpoint to see the production app return data from the Sinatra app and make a prediction and render in JSON format:
+```
+https://lit-fortress-28598.herokuapp.com/machinelearning/results/?student_id=5
+```
