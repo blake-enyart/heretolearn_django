@@ -30,7 +30,7 @@
  <img src="media/README/tech_stack.png" width="600" height="auto"/>
 </p>
 
-#### Analysis
+#### Data Visualization
 <p align="center">
  <img src="media/README/joint_plot.png" width="400" height="auto"/>
 </p>
