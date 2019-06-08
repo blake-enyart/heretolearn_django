@@ -54,7 +54,7 @@ python manage.py runserver
  
 ## Django App Demo
 
-Use the following endpoint to see the production app return data from the Sinatra app and make a prediction and render in JSON format:
+Use the following endpoint to see the production app return data from the Sinatra app, make a prediction, and render data and prediction in JSON format:
 ```
 https://lit-fortress-28598.herokuapp.com/machinelearning/results/?student_id=5
 ```
