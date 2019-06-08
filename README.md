@@ -11,7 +11,7 @@
 * Gradient boosted model training
 * matplotlib and seaborn visualization
 
- This app integrates with [Here To Learn](https://young-anchorage-86985.herokuapp.com), a Rails application, which presents the data and serves as the interface for teachers and students.
+ This app is one-third of a Service Oriented Architecture (SOA) app called Here To Learn which integrates with a [Rails application](https://github.com/carriewalsh/HereToLearn) which presents the data and serves as the interface for teachers and students and a [Sinatra application](https://github.com/JennicaStiehl/surveys) which stores survey information gathered from students.
 
 **Rails App Integration Highlight:**
 * Chart.js presentation of data
@@ -20,9 +20,10 @@
 * [Blake Enyart](https://github.com/blake-enyart) - Django app, data visualization (chart.js, seaborn, matplotlib), machine learning implementation
 * [William Peterson](https://github.com/wipegup) - Provided input and mentoring on the machine learning model development
 
-## Django App Goals
-* Work with two other applications, a [Sinatra microservice](https://aqueous-caverns-33840.herokuapp.com) and a [Rails application](https://young-anchorage-86985.herokuapp.com) in service oriented architechture.
-* Predict student test scores using machine learning model developed [here](https://github.com/blake-enyart/heretolearn_django/blob/master/jupyter_notebook/ml-generator.ipynb)
+### Location of Apps in Production
+* [Here to Learn](https://young-anchorage-86985.herokuapp.com) - Rails based central app designed for user interface
+* [Django application](http://lit-fortress-28598.herokuapp.com/) - Django based machine learning microservice
+* [Surveys](https://aqueous-caverns-33840.herokuapp.com) - Sinatra based database microservice
 
 ## Technical Highlights
 #### Tech Stack
