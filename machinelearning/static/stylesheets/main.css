@@ -1,0 +1,55 @@
+body {
+  background-color: #F6F7F8;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 300%
+}
+
+.main {
+  display: grid;
+  height: 100%;
+}
+
+.h2l-logo img {
+  width: 150px;
+  position: fixed;
+  right: 10px;
+}
+
+.body-container {
+  display: flex;
+}
+
+.body-card {
+  width: 10%;
+}
+
+.body-card-wide {
+  width: 80%;
+}
+
+.about-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.description-card.about {
+  padding: 0 50px;
+}
+
+.description-card {
+  width: 50%;
+}
+
+.data-visualization-graph img {
+  width: 100%;
+}

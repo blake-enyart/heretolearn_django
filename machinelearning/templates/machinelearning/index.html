@@ -1,13 +1,60 @@
+{% extends "machinelearning/base.html" %}
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'machinelearning/style.css' %}">
-
+{% block content %}
 <div class="main">
-  <section class="body">
-    <h1 class="title">Welcome to the Machine Learning Microservice</h1><br>
-
-    <h3>
-      If you would like to know more, check us out  <a href="https://github.com/carriewalsh/HereToLearn">here</a>
-    </h3>
+  <section class="header">
+    <div class="h2l-logo">
+      <img src="{% static "images/h2l_logo.png" %}" alt="h2l logo">
+    </div>
   </section>
+
+  <div class="body-container">
+    <div class="body-card">
+    </div>
+
+    <div class="about-container body-card-wide">
+      <div class="about-card">
+        <h1 class="title">
+          Welcome to the Here To Learn Django app
+        </h1>
+      </div>
+      <br>
+
+      <div class="description-container about-card">
+
+        <div class="description-card">
+          <div class="data-visualization-graph">
+            <img src="{% static "images/joint_plot.png" %}" alt="joint plot graph">
+          </div>
+        </div>
+
+        <div class="description-card about">
+          <p> This app is hosted on Heroku and utilizes a machine learning model
+            trained with over 300,000 data points to predict test outcomes for 5,000
+            mock students based on eating and sleeping habits for each student.
+          </p>
+          <p>
+            If you would like to see how this data is presented, visit the Rails app in production <a href="https://young-anchorage-86985.herokuapp.com/guest">here</a>
+          </p>
+          <br>
+          <p>
+            <a href="https://lit-fortress-28598.herokuapp.com/machinelearning/results/?student_id=5">https://lit-fortress-28598.herokuapp.com/machinelearning/results/?student_id=5</a>
+            <br>
+            The endpoint above demonstrates the following: <br>
+            <ul>
+              <li>Retrieval of student data from Sinatra app</li>
+              <li>Predict student's future test score</li>
+              <li>Render data in JSON format</li>
+            </ul>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="body-card">
+    </div>
+  </div>
 </div>
+{% endblock %}
