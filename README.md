@@ -12,8 +12,11 @@
 
  This app is one-third of a Service Oriented Architecture (SOA) app called Here To Learn which integrates with a [Rails application](https://github.com/carriewalsh/HereToLearn) which presents the data and serves as the interface for teachers and students and a [Sinatra application](https://github.com/JennicaStiehl/surveys) which stores survey information gathered from students.
 
-**Rails App Integration Highlight:**
-* Chart.js presentation of data
+**Application Highlights:**
+* 5 person team project
+* SOA integration into Rails and Sinatra applications all hosted independently on Heroku
+* Data munging, hyperparameter optimization & model selection
+* Matplotlib, seaborn, chart.js data visualization
 
 ## Contributing
 * [Blake Enyart](https://github.com/blake-enyart) - Django app, data visualization (chart.js, seaborn, matplotlib), machine learning implementation
@@ -24,13 +27,12 @@
 * [Django application](http://lit-fortress-28598.herokuapp.com/) - Django based machine learning microservice
 * [Surveys](https://aqueous-caverns-33840.herokuapp.com) - Sinatra based database microservice
 
-## Technical Highlights
-#### Tech Stack
+## Tech Stack
 <p align="center">
  <img src="media/README/tech_stack.png" width="600" height="auto"/>
 </p>
 
-#### Data Visualization
+## Data Visualization
 <p align="center">
  <img src="media/README/joint_plot.png" width="400" height="auto"/>
 </p>
